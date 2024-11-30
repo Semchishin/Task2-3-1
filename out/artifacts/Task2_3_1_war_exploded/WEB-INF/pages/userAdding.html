@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <title> New User </title>
+</head>
+<body>
+<form th:method="Post" th:action="@{/}" th:object = "${addUser}">
+    <label for="firstname"> Enter first name: </label>
+    <input type = "text" th:field="*{firstName}" id="firstname"/>
+<br>
+    <label for="lastname"> Enter last name: </label>
+    <input type = "text" th:field="*{lastName}" id="lastname"/>
+<br>
+    <label for="age"> Enter age: </label>
+    <input type = "text" th:field="*{age}" id="age"/>
+
+    <br>
+
+    <input type="submit" value="Add new user"/>
+</form>
+</body>
+
+</html>
