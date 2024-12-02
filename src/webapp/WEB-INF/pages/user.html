@@ -21,10 +21,17 @@
             <td th:utext="${user.getLastName()}">...</td>
             <td th:utext="${user.getAge()}">...</td>
 
-            <td th:onclick="'window.location.href = \'' + @{/edit/{id}(id=${user.getId()})} + '\''">
-                <input type="button" value="Edit user"></td>
-            <td th:onclick="'window.location.href = \'' + @{/delete/{id}(id=${user.getId()})} + '\''">
-                <input type="button" value="Delete user"></td>
+            <td>
+            <form th:action="@{/edit}">
+                <button type="submit" th:name="id" th:value="${user.id}">Edit</button>
+            </form>
+                </td>
+            </form>
+            <td>
+                <form th:action="@{/delete}">
+                    <button type="submit" th:name="id" th:value="${user.id}">Delete</button>
+                </form>
+            </td>
         </tr>
     </table>
 

@@ -5,7 +5,8 @@
     <title> Edit User </title>
 </head>
 <body>
-<form th:method="Post" th:action="@{/edit/{id}(id=${editUser.getId()})}" th:object = "${editUser}">
+<form th:method="Post" th:action="@{/edit}" th:object = "${editUser}">
+    <input name="id" th:field="*{id}" th:value="${editUser.id}" hidden="hidden">
     <label for="firstname"> Change first name: </label>
     <input type = "text" th:field="*{firstName}" id="firstname"/>
     <br>

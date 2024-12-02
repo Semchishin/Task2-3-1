@@ -34,8 +34,8 @@ public class UserServiceImpl implements UserService {
       return userRepository.showUserById(id);
     }
     @Override
-    public void updateUser(long id, User user){
-        userRepository.updateUser(id, user);
+    public void updateUser(User user){
+        userRepository.updateUser(user);
     }
 
     @Override

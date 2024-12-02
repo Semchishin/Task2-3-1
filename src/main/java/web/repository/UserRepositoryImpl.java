@@ -25,7 +25,7 @@ public class UserRepositoryImpl implements UserRepository {
         return em.find(User.class, id);
     }
     @Override
-    public void updateUser(long id, User user){
+    public void updateUser(User user){
        em.merge(user);
        em.flush();
     }
